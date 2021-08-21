@@ -15,4 +15,12 @@
         justify-content: center;
         align-items: center;
     }
+
+    main .container{
+        width: 100%;
+    }
+
+    .sinopseFilmePrincipal{
+        width: 90%;
+    }
 }
