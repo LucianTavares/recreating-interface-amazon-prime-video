@@ -1,0 +1,283 @@
+:root{
+    --branco: #ffffff;
+    --cinzaClaro: #c9c9c9;
+    --azulClaro: #1f1c30;
+    --azulEscuro: rgb(13, 13, 26);
+    --azulAssistir: #1653c4;
+    --azulHoverAssistir: #275fc7;
+    --hoverListaDetalhes: rgb(40, 40, 82);
+    --backFooter: #530202;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--azulEscuro);
+    font-family: 'Nunito', sans-serif;
+    color: var(--branco);
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--azulClaro);
+}
+
+.logo{
+    margin-left: 30px;
+    margin-top: 1%;
+    margin-bottom: 5px;
+}
+
+.explorar{
+    display: none;
+}
+
+header nav{
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--cinzaClaro);
+    font-weight: 500;
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+header nav a:hover{
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+header nav i{
+    color: var(--branco);
+    font-size: 19px;
+}
+
+.buscar{
+    margin-right: 20px;
+    margin-left: 5px;
+    background-color: var(--azulClaro);
+    border: 1px solid var(--cinzaClaro);
+    font-size: 19px;
+    color: var(--branco);
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    transition: .5s;
+}
+
+.buscar:focus{
+    background-color: var(--azulEscuro);
+    box-shadow: 1px 1px 10px 1px var(--branco);
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+/* Filme Principal */
+
+main .container{
+    margin-left: 30px;
+}
+
+.filmePrincipal{
+    background: linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.40)100%),  url("/images/gladiator.jpg");
+
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.infoFilmePrincipal{
+    color: var(--cinzaClaro);
+    font-size: 14px;
+    width: 500px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.sinopseFilmePrincipal{
+    font-size: 16px;
+    width: 500px;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.assistir{
+    background-color: var(--azulAssistir);
+    color: var(--branco);
+    width: 250px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.assistir a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.assistir:hover{
+    background-color: var(--azulHoverAssistir);
+    border: 1px solid var(--branco);
+}
+
+.lista{
+    background-color: var(--azulEscuro);
+    color: var(--branco);
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    border: 1px solid var(--branco);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.lista:hover{
+    background-color: var(--hoverListaDetalhes);
+    border: none;
+}
+
+.detalhes{
+    background-color: var(--azulEscuro);
+    width: 100px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid var(--branco);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.detalhes a{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.detalhes:hover{
+    background-color: var(--hoverListaDetalhes);
+    border: none;
+}
+
+/* Carrosel */
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--azulAssistir);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.saibaMais{
+    padding: 15px;
+}
+
+.saibaMais a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.saibaMais:hover{
+    background-color: var(--azulHoverAssistir);
+    border-radius: 3px;
+}
+
+.item:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap; 
+    color: var(--branco);
+    font-size: 40px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.box-filmes{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin: 50px 20px;
+}
+
+.carrosel-filmes span{
+    font-size: 19px;
+}
+
+.carrosel-series{
+    margin: 50px 20px;
+}
+
+.carrosel-series span{
+    font-size: 19px;
+}
+
+.carrosel-infantil{
+    margin: 50px 20px;
+}
+
+.carrosel-infantil span{
+    font-size: 19px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backFooter);
+    height: 60px;
+}
+
+footer span{
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--branco);
+    font-size: 19px;
+    margin-right: 20px;
+}
+
+footer .imgSocial{
+    margin: 10px;
+    width: 30px;
+}
