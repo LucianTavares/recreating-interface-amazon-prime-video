@@ -23,4 +23,20 @@
     .sinopseFilmePrincipal{
         width: 90%;
     }
+
+    .assistir{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .assistir{
+        margin-top: 250px;
+        width: 200px;
+    }
+
+    main p{
+        display: none;
+    }
+    
 }
